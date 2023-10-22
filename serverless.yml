@@ -23,7 +23,6 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs18.x
-  profile: githubActionsUser
 
 plugins:
   - serverless-s3-sync
@@ -49,6 +48,13 @@ functions:
     events:
       - http:
           path: get-user/{ID}
+          method: GET
+          cors: true
+  getAllUser:
+    handler: lambdas/getUser.getAllUser
+    events:
+      - http:
+          path: get-users
           method: GET
           cors: true
 

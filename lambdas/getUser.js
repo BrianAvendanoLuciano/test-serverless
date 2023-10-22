@@ -21,6 +21,12 @@ exports.handler = async (event) => {
   return Responses._200(data[id]);
 };
 
+exports.getAllUser = async (event) => {
+  console.log(`Getting user with ${JSON.stringify(event)}`);
+  // return data
+  return Responses._200(data);
+};
+
 const data = {
   1: { name: "Crystal Luciano", age: 26, job: "QA" },
   2: { name: "Brian Luciano", age: 24, job: "Backend Developer" },
