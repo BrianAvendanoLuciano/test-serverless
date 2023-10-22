@@ -23,7 +23,7 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs18.x
-  profile: serverlessUser
+  profile: githubActionsUser
 
 plugins:
   - serverless-s3-sync
